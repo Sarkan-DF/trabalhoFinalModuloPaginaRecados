@@ -1,0 +1,85 @@
+body{
+    background-color: #F0F8FF;
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+    justify-content: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.caixa1{
+    background-color: #F0F8FF;
+    height: 100vh;
+    width: 40%;
+}
+
+.caixa2{
+    background-color: #F0F8FF;
+    height: 100vh;
+    width: 60%;
+    text-align: center;
+}
+
+img{
+    height: 100vh;
+    width: 100%;
+}
+
+table, tr, td, th{
+    border: 0px solid white;
+    border-collapse: collapse;
+    width: 1200px;
+    text-align: center;
+}
+
+.titulo{
+    font-family: sans-serif;
+    color: #380B61;
+    margin-left: 7%;
+}
+
+input, select, textarea, button {
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #59429d;
+    border-radius: 5px;
+}
+
+.button {
+    font-size: 1.2em;
+    background: #59429d;
+    border: 0;
+    color: #ffffff;
+    padding: 0.2em 0.6em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+}
+
+.button:hover {
+    background: #CCBBFF;
+    box-shadow: inset 2px 2px 2px rgba(0,0,0,0.2);
+    text-shadow: none;
+}
+
+#paginaRecados{
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+#descricao{
+    width: 39%;
+}
+
+#detalhamento{
+    width: 39%;
+}
