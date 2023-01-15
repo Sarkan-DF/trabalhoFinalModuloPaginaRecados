@@ -14,29 +14,32 @@
         </div>
 
         <div class="caixa2">
-            <h2 class="titulo">CRIAR CONTA</h2>
-            <br><br>
-            <form>
-                <div>
-                    <label for="userName">User Name: </label>
-                    <input type="text" name="userName" id="userName">
-                </div>
-                <br>
-                <div>
-                    <label for="password">Password: </label>
-                    <input type="password" name="password" id="password">
-                </div>
-                <br>
-                <div>
-                    <label for="repeatPassword">Repeat Password: </label>
-                    <input type="password" name="repeatPassword" id="repeatPassword">
-                </div>
-                <br>
-                <div>
-                    <button type="submit" class="button">CRIAR CONTA AGORA</button>
-                </div>
-            </form>
+            <div class="posiciona">
+                <h2 class="titulo">CRIAR CONTA</h2>
+                <br><br>
+                <form>
+                    <div>
+                        <label for="userName1"></label>
+                        <input type="text" name="userName" id="userName1" placeholder="User Name" class="imputFormat">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="password1"></label>
+                        <input type="password" name="password" id="password1" placeholder="Password" class="imputFormat">
+                    </div>
+                    <br>
+                    <div>
+                        <label for="repeatPassword1"></label>
+                        <input type="password" name="repeatPassword" id="repeatPassword1" placeholder="Repeat Password" class="imputFormat">
+                    </div>
+                    <br>
+                    <div>
+                        <button type="submit" class="button" id="buttonCriaContaAgora" onclick="criaConta()">CRIAR CONTA AGORA</button>
+                    </div>
+                </form>
+            </div>
         </div>
     </main>
+    <script src="./paginaRecados.js"></script>
 </body>
 </html>

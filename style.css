@@ -83,3 +83,46 @@ input, select, textarea, button {
 #detalhamento{
     width: 39%;
 }
+
+#linkCriaConta{
+    padding: 10px;
+}
+
+input::placeholder {
+    color: #59429d;
+    padding-left: 10px;
+    opacity: 0.5;
+  }
+
+#buttonEntrarSistema{
+    width: 410px;
+}
+
+#buttonCriaContaAgora{
+    width: 410px;
+}
+
+#tituloEntrarSistema{
+    margin-left: auto;
+    margin-bottom: 0px;
+}
+
+.imputFormat{
+    padding-left: 5px;
+}
+
+.posiciona{
+    margin-top: 300px;
+}
+
+#userName1{
+    width: 400px;
+}
+
+#password1{
+    width: 400px;
+}
+
+#repeatPassword1{
+    width: 400px;
+}
