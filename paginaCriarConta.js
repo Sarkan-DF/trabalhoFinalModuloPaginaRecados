@@ -1,6 +1,8 @@
 let data = [];
 
-document.addEventListener('submit', (evento) => {
+const formularioHTML = document.getElementById("formCriaConta");
+
+formularioHTML.addEventListener('submit', (evento) => {
     evento.preventDefault();
 
     const userName = document.getElementById('userName1').value;
@@ -8,6 +10,8 @@ document.addEventListener('submit', (evento) => {
     const userRepeatPassword = document.getElementById('repeatPassword1').value;
 
     console.log(userName)
+    console.log(userPassword)
+    console.log(userRepeatPassword)
 
     if (userPassword != userRepeatPassword) {
         alert("A senhas devem ser iguais!");
