@@ -45,6 +45,8 @@ table, tr, td, th{
     font-family: sans-serif;
     color: #380B61;
     margin-left: 7%;
+    margin-left: auto;
+    margin-bottom: 0px;
 }
 
 input, select, textarea, button {
@@ -84,8 +86,9 @@ input, select, textarea, button {
     width: 39%;
 }
 
-#linkCriaConta{
+.formatLinks{
     padding: 10px;
+    color: #59429d;
 }
 
 input::placeholder {
@@ -102,10 +105,10 @@ input::placeholder {
     width: 410px;
 }
 
-#tituloEntrarSistema{
+/* #tituloEntrarSistema{
     margin-left: auto;
     margin-bottom: 0px;
-}
+} */
 
 .imputFormat{
     padding-left: 5px;
