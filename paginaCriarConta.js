@@ -1,4 +1,5 @@
 let data = JSON.parse(localStorage.getItem('usuarios')) || [];
+console.log(data);
 
 const formularioHTML = document.getElementById("formCriaConta");
 
@@ -12,6 +13,12 @@ formularioHTML.addEventListener('submit', (evento) => {
     console.log(userName)
     console.log(userPassword)
     console.log(userRepeatPassword)
+
+    const usuarioExistente = data.some((usuario) => usuario.userName === userName);
+    if (usuarioExistente) {
+        alert("Usuaria já cadastrado!");
+        return;
+    }
 
     if (userPassword != userRepeatPassword) {
         alert("A senhas devem ser iguais!");

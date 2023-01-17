@@ -1,5 +1,5 @@
 let useLogeer = JSON.parse(localStorage.getItem('usuarios'))
-console.log(useLogeer);
+//console.log(useLogeer);
 
 const formularioHTML = document.getElementById('formEntraSistema');
 
