@@ -1,4 +1,4 @@
-let data = [];
+let data = JSON.parse(localStorage.getItem('usuarios')) || [];
 
 const formularioHTML = document.getElementById("formCriaConta");
 
