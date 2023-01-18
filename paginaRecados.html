@@ -17,17 +17,20 @@
                 <input type="text" name="descricao" id="descricao">
                 <label for="detalhamento">Detalhamento:</label>
                 <input type="text" name="detalhamento" id="detalhamento">
-                <button type="submit" class="button">Salvar</button>
+                <button class="button" onclick="salvaTabela()">Salvar</button>
             </div>
             <br><hr><br>
             <div>
                 <table>
-                    <tr>
-                        <td>#</td>
-                        <td>Descrição</td>
-                        <td>Detalhamento</td>
-                        <td>Ação</td>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Descrição</th>
+                            <th>Detalhamento</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody id="listaRecados"></tbody>
                 </table>
             </div>
             <br><hr>
