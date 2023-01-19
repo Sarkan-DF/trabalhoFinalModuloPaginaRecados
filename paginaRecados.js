@@ -32,6 +32,8 @@ function renderTabela() {
 
         deleteButton.setAttribute("onClick", `deleteRecado(${index})`);
         EditButton.setAttribute("onClick", `editaRecado(${index})`);
+        EditButton.setAttribute("class", "button");
+        deleteButton.setAttribute("class", "button");
 
         tr.appendChild(td1);
         tr.appendChild(td2);
