@@ -1,21 +1,20 @@
-let useLogeer = JSON.parse(localStorage.getItem('usuarios'))
-//console.log(useLogeer);
+const allUser = JSON.parse(localStorage.getItem("allUser"));
 
-const formularioHTML = document.getElementById('formEntraSistema');
+const userName = document.getElementById("userName");
+const userPassword = document.getElementById("userPassword");
 
-formularioHTML.addEventListener('submit', (evento) => {
-    evento.preventDefault();
+function login() {
+    const checkUser = allUser.find(
+        (valor) =>
+            valor.userName === userName.value && valor.userPassword === userPassword.value
+    );
 
-    const userNameEntra = document.getElementById('userName2').value;
-    const userPasswordEntra = document.getElementById('password2').value;
-
-    const usuarioEncontrado = useLogeer.some((usuario) => usuario.userName === userNameEntra && usuario.userPassword === userPasswordEntra);
-
-    if (usuarioEncontrado) {
-        window.location.href = './paginaRecados.html'
-
-    } else{
-        alert("Usuario e senha errado!");
-        return;
+    if (checkUser) {
+        alert("Usuario logado com sucesso!");
+        checkUser.logged = true;
+        sessionStorage.setItem("loggedUser", JSON.stringify(checkUser));
+        window.location.href = "paginaRecados.html";
+    } else {
+        return alert("Usuario ou senha incorreta");
     }
-});
+};

@@ -1,43 +1,34 @@
-let data = JSON.parse(localStorage.getItem('usuarios')) || [];
-console.log(data);
+let allUser = JSON.parse(localStorage.getItem('allUser')) || [];
 
-const formularioHTML = document.getElementById("formCriaConta");
+const userName = document.getElementById('userName1');
+const userPassword = document.getElementById('password1');
+const userRepeatPassword = document.getElementById('repeatPassword1');
 
-formularioHTML.addEventListener('submit', (evento) => {
-    evento.preventDefault();
+function registerUser() {
+    const checkUser = allUser.some((valor) => userName.value === valor.userName);
+    if (checkUser) {
+        return alert("Usuario já cadastrado!");
+    };
 
-    const userName = document.getElementById('userName1').value;
-    const userPassword = document.getElementById('password1').value;
-    const userRepeatPassword = document.getElementById('repeatPassword1').value;
-
-    console.log(userName)
-    console.log(userPassword)
-    console.log(userRepeatPassword)
-
-    const usuarioExistente = data.some((usuario) => usuario.userName === userName);
-    if (usuarioExistente) {
-        alert("Usuaria já cadastrado!");
-        return;
+    if (userName.value === "" || userPassword.value === "" || userRepeatPassword.value === "") {
+        return alert("Todos os campos tem que ser prencidos!")
     }
 
-    if (userPassword != userRepeatPassword) {
-        alert("A senhas devem ser iguais!");
-        return;
-    }
-
-    if (userName === "") {
-        alert("User name tem que ser preenchido!");
-        return;
-    }
-
-    const loginUser = {
-        userName: userName,
-        userPassword: userPassword
-    }
-
-    data.push(loginUser)
+    if (userPassword.value != userRepeatPassword.value) {
+        return alert("A senhas devem ser iguais!")
+    };
     
-    localStorage.setItem('usuarios', JSON.stringify(data));
-    alert("Usuario cadastrado com sucesso!\nVocê será redirecionado para a tela de login!")
-    window.location.href = './paginaEntrarSistema.html'
-});
+    const newUser = {
+        userName: userName.value,
+        userPassword: userPassword.value,
+        logged: false,
+        recados: []
+    };
+    allUser.push(newUser);
+    saveOnStorege();
+    window.location.href = "paginaEntrarSistema.html";
+};
+
+function saveOnStorege() {
+    localStorage.setItem("allUser", JSON.stringify(allUser));
+};
