@@ -10,9 +10,9 @@ function login() {
     );
 
     if (checkUser) {
-        alert("Usuario logado com sucesso!");
         checkUser.logged = true;
         sessionStorage.setItem("loggedUser", JSON.stringify(checkUser));
+        alert("Usuario logado com sucesso!\nVocê será redirecionado para a tela de recados!");
         window.location.href = "paginaRecados.html";
     } else {
         return alert("Usuario ou senha incorreta");

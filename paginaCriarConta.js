@@ -26,6 +26,7 @@ function registerUser() {
     };
     allUser.push(newUser);
     saveOnStorege();
+    alert("Usuario castrado com sucesso!\nVocê será redirecionado para a tela de login!");
     window.location.href = "paginaEntrarSistema.html";
 };
 

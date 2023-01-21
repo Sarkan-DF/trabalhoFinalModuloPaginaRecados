@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,11 +8,11 @@
     <link rel="stylesheet" href="/style.css">
     <title>Recados</title>
 </head>
+
 <body id="paginaRecados">
     <main>
-        <h1>Meus recados</h1>
-        <br>
         <form>
+            <h1>Meus recados</h1>
             <div>
                 <label for="descricao">Descrição:</label>
                 <input type="text" name="descricao" id="descricao">
@@ -19,7 +20,8 @@
                 <input type="text" name="detalhamento" id="detalhamento">
                 <button type="button" class="button" onclick="recados()">Salvar</button>
             </div>
-            <br><hr><br>
+            <br>
+            <hr><br>
             <div>
                 <table>
                     <thead>
@@ -33,9 +35,16 @@
                     <tbody id="listaRecados"></tbody>
                 </table>
             </div>
-            <br><hr>
+            <br>
+            <hr>
+            <br>
+            <div id="usuarioLodado">
+                <span id="usuario"></span>
+                <button type="button" class="button" onclick="logout()">Logout</button>
+            </div>
         </form>
     </main>
     <script src="./paginaRecados.js"></script>
 </body>
+
 </html>

@@ -1,6 +1,6 @@
 const table = document.getElementById("listaRecados");
 const loggedUser = JSON.parse(sessionStorage.getItem("loggedUser"));
-const allUsers = JSON.parse(localStorage.getItem("allUsers"));
+const allUser = JSON.parse(localStorage.getItem("allUser"));
 
 function recados() {
     const descricaoRecado = document.getElementById('descricao');
@@ -11,15 +11,14 @@ function recados() {
         detalhamentoRecado: detalhamentoRecado.value
     };
     loggedUser.recados.push(objRecado);
-    
+
     renderTabela();
     saveOnStorage();
 };
 
 function checkLogged() {
-    if (loggedUser.logged) {
-    } else{
-        alert("Usuario não autorizado!\nVocê será redirecionado para a tela de login!");
+    if (!loggedUser?.logged || !loggedUser) {
+        alert("Usuario nao credenciado!\nVocê será redirecionado para a tela de login!");
         return (window.location.href = "paginaEntrarSistema.html");
     }
 };
@@ -27,11 +26,11 @@ function checkLogged() {
 function saveOnStorage() {
     sessionStorage.setItem("loggedUser", JSON.stringify(loggedUser));
 
-    const findUser = allUsers.findIndex((valor) => valor.userName === loggedUser.userName);
+    let indexUser = allUser.findIndex((user, index, array) => user.userName === loggedUser.userName);
 
-    allUsers[findUser] = loggedUser;
+    allUser[indexUser] = loggedUser;
 
-    localStorage.setItem("allUsers", JSON.stringify(allUsers));
+    localStorage.setItem("allUser", JSON.stringify(allUser));
 };
 
 function renderTabela() {
@@ -75,12 +74,26 @@ function deleteRecado(index) {
 function editaRecado(index) {
     const descricaoRecado = prompt("Digite a nova descrição: ");
     const detalhamentoRecado = prompt("Digite o novo detalhamento: ");
-    
+
     loggedUser.recados[index].descricaoRecado = descricaoRecado;
     loggedUser.recados[index].detalhamentoRecado = detalhamentoRecado;
     renderTabela();
     saveOnStorage();
 };
 
-//checkLogged();
+function logout() {
+    sessionStorage.removeItem("loggedUser");
+    alert("Usuario desconectado do sistema com sucesso!");
+    window.location.href = "paginaEntrarSistema.html"
+};
+
+function mostraUsuario() {
+    window.onload = function () {
+        let usuario = loggedUser.userName;
+        document.getElementById('usuario').innerHTML = (`Usuario logado: ${usuario}`);
+    };
+};
+
+mostraUsuario();
+checkLogged();
 renderTabela();
