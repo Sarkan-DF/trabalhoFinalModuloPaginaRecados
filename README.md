@@ -1,8 +1,8 @@
 # Sobre o projeto
 
-Este é um projeto de um curriculo digital.
+Este é um projeto de um currículo digital.
 
-O projeto foi estruturado, a partir da atividade de final de modulo de Frontend 1, da formação STARTER FULL STACK WEB DEVELOPER, pela @Growdev.
+O projeto foi estruturado, a partir da atividade final de módulo de Frontend 1, da formação STARTER FULL STACK WEB DEVELOPER, pela @Growdev.
 
 ### Link para o Projeto: <xxx>
 
