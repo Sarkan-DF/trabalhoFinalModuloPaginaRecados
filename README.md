@@ -20,6 +20,6 @@ O projeto foi estruturado, a partir da atividade final de módulo de Frontend 1,
 * HTML / CSS / JavaScrip;
 * BootsTrap;
 
-# Autores
+# Autor
 
 Igor Matos https://www.linkedin.com/in/igor-matos-22815b98/
