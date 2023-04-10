@@ -4,7 +4,7 @@ Este é um projeto de um currículo digital.
 
 O projeto foi estruturado, a partir da atividade final de módulo de Frontend 1, da formação STARTER FULL STACK WEB DEVELOPER, pela @Growdev.
 
-### Link para o Projeto: <xxx>
+### Link para o Projeto: <https://curriculo-digital-6qk56uicj-sarkan-df.vercel.app/index.html>
 
 # Layout mobile
 ![image](https://user-images.githubusercontent.com/63614609/230956746-62289958-7762-4296-b130-f077dafdcd95.png)
