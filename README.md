@@ -12,8 +12,8 @@ O projeto foi estruturado, a partir da atividade final de módulo de Frontend 1,
 
 
 # Layout web
-![image](https://user-images.githubusercontent.com/63614609/230193949-500d6f7d-471d-4d5b-8dbb-3a59a4f8f7ea.png)
-![image](https://user-images.githubusercontent.com/63614609/230194288-df221982-93c7-4fb3-9a71-e5f98b0c5263.png)
+![image](https://user-images.githubusercontent.com/63614609/230957604-c4c5f3bd-8ffd-468e-a51e-61b8b1420ff3.png)
+
 
 # Tecnologias utilizadas
 ## Front end
